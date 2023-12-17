@@ -8,14 +8,10 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    /* Use a single font for better readability */
-    /* background-color: #f8f6f6; */
-    /* Light background color */
-    color: #333;
-    /* Default text color */
+    background: linear-gradient(#03060c 40%, #4385F3 190%);
 }
 
-
+/* header starts here */
 #header {
     display: flex;
     flex-wrap: wrap;
@@ -25,34 +21,42 @@ body {
     top: 0;
     left: 0;
     z-index: 2;
-    background-image: url(images/back.png);
-   background-size: 200px;
+    background-color: #03060c;
+    background-size: 200px;
     border-style: none;
- /* red #EED1CD */
- /* green #B5D8B5 */
- /* blue #B8C7E6 */
- /* yellow #EFF3D0 */
 }
 
-.logo {
-    padding-top: 12px;
-    padding-right: 10px;
-    /* background-color: #ffffff; */
+
+
+.logo h1{
+    padding-bottom: 12px;
+    padding-right: 12px;
+    size: 20px;
 }
 
+/* header ends here */
 .time {
+    padding-top: 12px;
     color: #ffffff;
-    /* background-color: #000000; */
 }
-
 h1 {
-    font-size: 16px;
-    color: #161b24; 
+    font-size: 20px;
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+h2{
+    text-decoration: underline;
 }
 
 
-p1 {
+
+p {
     color: #ffffff;
+    margin-left: 10px;
 }
 
 .images {
@@ -60,7 +64,14 @@ p1 {
     padding-top: 15px;
 }
 
-.subject {
+.intro h1{
+    padding-bottom: 15px;
+}
+
+/* subjects start here */
+
+.subject h1 {
+    font-size: 16px;
     padding: 10px;
     text-align: center;
 }
@@ -68,12 +79,19 @@ p1 {
 .subjects {
     max-height: 150px;
     overflow: auto;
-    border: 1px solid #ffffff;
+    /* border: solid #000000; */
     padding: 10px;
+
 }
 
-p {
-    margin-left: 10px;
+
+/* subjects ends here */
+
+
+/* speakers start here */
+
+.speakers h1{
+    font-size: 16px;
 }
 
 .speakers {
@@ -95,7 +113,6 @@ p {
 .wrapper i {
     height: 40px;
     width: 40px;
-    background: #fff;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -104,7 +121,6 @@ p {
     top: 50%;
     font-size: 1rem;
     transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .wrapper i:first-child {
@@ -151,8 +167,8 @@ p {
     scroll-snap-align: start;
     height: 242px;
     list-style: none;
-    background-color: #62789f41;
-    border-radius: 8px;
+    background-color: #4384f31d;
+    border-radius: 5px;
     display: flex;
     cursor: pointer;
     padding-bottom: 10px;
@@ -173,122 +189,105 @@ p {
     font-weight: 500;
     font-size: 1rem;
     margin: 15px 0 5px;
+     color: #ffffff;
 }
+
 
 .card span {
     font-size: 0.8rem;
+    color: #ffffff;
 }
 
+/* speakers ends here */
+
+
+
+/* agenda starts here */
+.agenda h1{
+    font-size: 16px;
+}
+.agenda {
+    text-align: center;
+
+}
 
 .agenda .AgendaT {
     padding: 10px;
-    text-align: left;
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin-left: 38px;
     height: auto;
-    /* width: 200px;
-    height: 100px; */
-    border: 1px solid #b5d8b5aa;
-    border-radius: 15px;
+
 }
 
-.holding {
+
+.holding1 {
+    box-shadow: 0 0 10px rgba(92, 101, 179, 0.5);
     padding-top: 3%;
     padding-bottom: 5%;
     position: relative;
-    
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 15px;
+
 }
 
-.holding span {
+.holding1 span {
     display: block;
-    color: #306030;
+    color: #ffffff;
+    font-size: 14px;
 }
 
-.holding p {
+.holding1 p {
     display: block;
     padding-bottom: 5%;
-    color: #333;
+    color: #ffffff;
+    font-size: 12px;
 }
 
-.holding:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 3%;
-    width: 94%;
-    height: 1px;
-    background-color: #728a72;
-  
-  
-}
+
+/* agenda ends here */
+
 
 .intro,
-.subjects,
-.agenda {
+.subjects {
     text-align: center;
     font-size: small;
-    background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
-.wrapper .carousel {
-  background-color: #ffffff; 
-  border-radius: 1px;
+
+
+/* map */
+.images h1{
+    font-size: 16px;
+}
+.images {
+    margin-bottom: 30px;
 }
 
-.card {
-    background-color: #000000;
-    border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-}
+/* footer */
 
-.card h2 {
-    color: #000000;
- 
-}
-
-.card span {
-    /* name */
-    color: #3e3e3e;
-   
-}
-
-/* Add the following styles at the end of your existing CSS */
-
-/* Footer Section */
 footer {
     padding: 20px;
-    text-align: left;
-  }
-  
-  /* .footer-links {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  } */
-#textfoot{
-    padding-top: 5px;
+    text-align: center;
 }
 
-#Socialfoot{
+
+#textfoot {
+    padding-top: 5px;
+    color: #ffffff;
+}
+
+#gtext {
+    color: #ffffff;
+}
+
+#Socialfoot {
     padding-top: 10px;
 }
-#socialsfoot{
+
+#socialsfoot {
     padding-right: 10px;
 }
-  /* Adjustments for responsiveness */
-  @media screen and (max-width: 768px) {
-    .footer-links {
-      flex-direction: column;
-    }
-  
-    .footer-links a {
-      margin: 10px 0;
-    }
-  }
-
-  .images{
-    margin-bottom: 30px;
-  }
-  
