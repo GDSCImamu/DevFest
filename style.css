@@ -244,6 +244,7 @@ address {
   gap: 10px;
   font-size: 2rem;
   font-weight: var(--medium);
+  font-variant: tabular-nums;
   margin-bottom: 2rem;
 }
 
@@ -352,6 +353,18 @@ main {
   gap: 1rem;
 }
 
+/* General Styling */
+.section__heading {
+  font-size: 2rem;
+  font-weight: var(--bold);
+}
+
+.section__paragraph {
+  font-size: 1rem;
+  font-weight: var(--regular);
+}
+/* General Styling */
+
 /* About */
 .about {
   display: grid;
@@ -369,15 +382,11 @@ main {
 .about__heading {
   grid-column: 1/2;
   grid-row: 1/2;
-  font-size: 2rem;
-  font-weight: var(--bold);
 }
 
 .about__paragraph {
   grid-column: 1/2;
   grid-row: 2/3;
-  font-size: 1rem;
-  font-weight: var(--regular);
   max-width: 55ch;
 }
 
@@ -418,6 +427,70 @@ main {
 }
 /* About */
 
+/* Agenda */
+.agenda {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+  width: 100%;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+}
+
+.agenda__heading {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.agenda__list {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: min(100%, 1000px);
+  gap: 1rem;
+}
+
+.agenda__listitem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.agenda__time {
+  text-transform: uppercase;
+  max-width: 7ch;
+  font-variant: tabular-nums;
+}
+
+.agenda__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 6rem;
+  padding: 1rem;
+  border-left: 3px solid var(--blue);
+  background-color: rgba(255, 255, 255, 0.308);
+}
+
+.agenda__item {
+  font-size: 1rem;
+}
+
+.agenda__title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: var(--medium);
+}
+/* Agenda */
+
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(./assets/images/bg.png);
@@ -436,6 +509,12 @@ main {
     gap: 2rem;
   }
 
+  /* General Styling */
+  .section__heading {
+    font-size: 36px;
+  }
+  /* General Styling */
+
   /* About */
   .about {
     grid-template-columns: repeat(2, 1fr);
@@ -448,7 +527,6 @@ main {
     grid-column: 1/2;
     grid-row: 1/2;
     justify-self: start;
-    font-size: 36px;
   }
 
   .about__paragraph {
@@ -485,6 +563,33 @@ main {
     justify-self: start;
   }
   /* About */
+
+  /* Agenda */
+  .agenda {
+    padding: 4rem 3rem;
+  }
+
+  .agenda__list {
+    gap: 1.5rem;
+  }
+
+  .agenda__listitem {
+    gap: 1.5rem;
+  }
+
+  .agenda__inner {
+    padding: 2rem;
+    border-left: 4px solid var(--blue);
+  }
+
+  .agenda__item {
+    font-size: 1.2rem;
+  }
+
+  .agenda__title {
+    font-size: 1.5rem;
+  }
+  /* Agenda */
 }
 
 @media screen and (min-width: 1024px) {
@@ -501,6 +606,12 @@ main {
     gap: 1rem;
   }
 
+  /* General Styling */
+  .section__heading {
+    font-size: 48px;
+  }
+  /* General Styling */
+
   /* About */
   .about {
     column-gap: 3rem;
@@ -511,6 +622,12 @@ main {
     font-size: 48px;
   }
   /* About */
+
+  /* Agenda */
+  .agenda {
+    padding: 6rem;
+  }
+  /* Agenda */
 }
 
 @media screen and (min-width: 1440px) {
