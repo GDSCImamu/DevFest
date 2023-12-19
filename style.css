@@ -447,8 +447,8 @@ main {
   .about__heading {
     grid-column: 1/2;
     grid-row: 1/2;
-    font-size: 2rem;
     justify-self: start;
+    font-size: 36px;
   }
 
   .about__paragraph {
@@ -505,6 +505,10 @@ main {
   .about {
     column-gap: 3rem;
     padding: 6rem;
+  }
+
+  .about__heading {
+    font-size: 48px;
   }
   /* About */
 }
