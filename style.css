@@ -491,6 +491,47 @@ main {
 }
 /* Agenda */
 
+/* Location */
+.location {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.location__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  background-color: var(--blue);
+}
+
+.location__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.location__link {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: var(--medium);
+  gap: 0.5rem;
+}
+
+.location__map {
+  width: 100%;
+  height: 300px;
+}
+/* Location */
+
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(./assets/images/bg.png);
@@ -590,6 +631,27 @@ main {
     font-size: 1.5rem;
   }
   /* Agenda */
+
+  /* Location */
+  .location {
+    position: relative;
+    height: 400px;
+    padding: 0;
+    margin: 200px 0;
+  }
+
+  .location__inner {
+    position: absolute;
+    bottom: -100px;
+    left: 2rem;
+    max-width: 350px;
+    border-radius: 10px;
+  }
+
+  .location__map {
+    height: 100%;
+  }
+  /* Location */
 }
 
 @media screen and (min-width: 1024px) {
@@ -628,6 +690,12 @@ main {
     padding: 6rem;
   }
   /* Agenda */
+
+  /* Location */
+  .location {
+    height: 600px;
+  }
+  /* Location */
 }
 
 @media screen and (min-width: 1440px) {
@@ -644,4 +712,9 @@ main {
     font-size: 3rem;
   }
   /* Timer */
+
+  /* Location */
+  .location {
+    height: 650px;
+  }
 }
