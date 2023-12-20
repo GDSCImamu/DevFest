@@ -541,6 +541,35 @@ main {
 }
 /* Agenda */
 
+/* Sponsors */
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 1rem;
+}
+
+.sponsors__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sponsor {
+  flex-basis: 150px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+/* Sponsors */
+
 /* Location */
 .location {
   display: flex;
@@ -702,6 +731,17 @@ main {
   }
   /* Agenda */
 
+  /* Sponsors */
+  .sponsors {
+    padding: 4rem 3rem;
+  }
+
+  .sponsor {
+    flex-basis: 200px;
+    max-width: 200px;
+  }
+  /* Sponsors */
+
   /* Location */
   .location {
     position: relative;
@@ -761,6 +801,21 @@ main {
   }
   /* Agenda */
 
+  /* Sponsors */
+  .sponsors {
+    padding: 6rem;
+  }
+
+  .sponsors__inner {
+    max-width: 1000px;
+  }
+
+  .sponsor {
+    max-width: 200px;
+    flex-basis: 200px;
+  }
+  /* Sponsors */
+
   /* Location */
   .location {
     height: 600px;
@@ -782,6 +837,13 @@ main {
     font-size: 3rem;
   }
   /* Timer */
+
+  /* Sponsors */
+  .sponsor {
+    max-width: 200px;
+    flex-basis: 200px;
+  }
+  /* Sponsors */
 
   /* Location */
   .location {
