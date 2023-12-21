@@ -1,74 +1,106 @@
-const carousel = document.querySelector(".carousel");
-const arrowBtns = document.querySelectorAll(".wrapper i");
-const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-const carouselChildren = [...carousel.children];
+// Timer Elements on DOM
+const dayElement = document.querySelector('#timerDay');
+const hourElement = document.querySelector('#timerHour');
+const minuteElement = document.querySelector('#timerMinute');
+const secondElement = document.querySelector('#timerSecond');
 
-let isDragging = false, startX, startScrollLeft, timeoutId;
+// Initializing variables
+const lunchDate = new Date('Dec 25, 2023 00:00:00').getTime();
 
-let cardPreView = Math.round(carousel.offsetWidth / firstCardWidth);
+let currentTime;
+let launchWaitTime;
+let days, hours, minutes, seconds;
 
-carouselChildren.slice(-cardPreView).reverse().forEach(card => {
-    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
-});
+// Runs Timer
+const startTimer = () => {
+  currentTime = new Date().getTime();
+  launchWaitTime = lunchDate - currentTime;
 
-carouselChildren.slice(0, cardPreView).forEach(card => {
-    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
-});
+  calculateTime();
 
-arrowBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
-    })
-});
+  displayTime();
 
-const dragstart = (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-}
-const dragging = (e) => {
-    if (!isDragging) return;
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-}
-const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-
-}
-
-const autoPlay = () => {
-    if (window.innerWidth < 800) return;
-    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2000);
-}
-autoPlay();
-
-const infiniteScroll = () => {
-    if (carousel.scrollLeft === 0) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
-        carousel.classList.remove("no-transition");
-    } else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
-        carousel.classList.add("no-transition");
-        carousel.scrollLeft = carousel.offsetWidth;
-        carousel.classList.remove("no-transition");
-    }
-};
-const touchEnd = () => {
-    infiniteScroll();
-    carousel.removeEventListener("touchend", touchEnd);
-};
-
-carousel.addEventListener("touchend", touchEnd);
-carousel.addEventListener("mousedown", dragstart);
-carousel.addEventListener("mousemove", dragging);
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("scroll", infiniteScroll);
-
-const style = document.createElement("style");
-style.innerHTML = `
-  .wrapper .carousel::-webkit-scrollbar {
-    display: none;
+  if (launchWaitTime <= 0) {
+    stopTimer();
   }
-`;
-document.head.appendChild(style);
+};
+
+// Get values for hours, minutes and seconds
+const calculateTime = () => {
+  days = Math.trunc(launchWaitTime / (1000 * 60 * 60 * 24));
+  hours = Math.trunc(
+    (launchWaitTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  minutes = Math.trunc((launchWaitTime % (1000 * 60 * 60)) / (1000 * 60));
+  seconds = Math.trunc((launchWaitTime % (1000 * 60)) / 1000);
+};
+
+// Shows values on DOM
+const displayTime = () => {
+  dayElement.textContent = days < 10 ? `0${days}` : days;
+  hourElement.textContent = hours < 10 ? `0${hours}` : hours;
+  minuteElement.textContent = minutes < 10 ? `0${minutes}` : minutes;
+  secondElement.textContent = seconds < 10 ? `0${seconds}` : seconds;
+};
+
+// Stops Timer
+const stopTimer = () => {
+  clearInterval(countDown);
+  dayElement.textContent = '00';
+  hourElement.textContent = '00';
+  minuteElement.textContent = '00';
+  secondElement.textContent = '00';
+};
+
+// Timer launched
+const countDown = setInterval(() => startTimer(), 1000);
+
+// Accordion
+document.querySelectorAll('.accordion__title').forEach((button) => {
+  button.addEventListener('click', () => {
+    const accordionContent = button.nextElementSibling;
+
+    button.classList.toggle('active');
+
+    if (button.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    } else {
+      accordionContent.style.maxHeight = 0;
+    }
+
+    // Close other open accordion items
+    document.querySelectorAll('.accordion__title').forEach((otherButton) => {
+      if (otherButton !== button) {
+        otherButton.classList.remove('active');
+        otherButton.nextElementSibling.style.maxHeight = 0;
+      }
+    });
+  });
+});
+
+// Header
+// Elements
+const nav = document.querySelector('.nav');
+const navLinks = Array.from(document.querySelectorAll('.nav__item'));
+const navList = document.querySelector('.nav__list');
+const navHamburger = document.querySelector('.nav__hamburger');
+const openHamburger = document.querySelector('#hamburgerOpen');
+const closeHamburger = document.querySelector('#hamburgerClose');
+
+// Control Nav closing
+navList.addEventListener('click', (e) => {
+  const cursorTarget = e.target.closest('.nav__item');
+  if (!navLinks.includes(cursorTarget)) return;
+  closeHamburger.checked = true;
+});
+
+// Scroll Blur
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+
+  if (window.scrollY > 300) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
