@@ -299,6 +299,7 @@ address {
 .accordion__content p {
   margin: 15px 0;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 .accordion__icon {
@@ -338,6 +339,16 @@ address {
     font-size: 2.5rem;
   }
   /* Timer */
+
+  /* Accordion */
+  .accordion__title {
+    font-size: 24px;
+  }
+
+  .accordion__content p {
+    font-size: 1.2rem;
+  }
+  /* Accordion */
 }
 /* Components */
 
@@ -509,7 +520,7 @@ header:has(#hamburgerOpen:checked) > #navWrapper {
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0 1rem;
-  border-top: 1px solid var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.26);
 }
 
 .footer__logo {
@@ -559,7 +570,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh + 1rem);
   text-align: center;
   padding: 4rem 1rem 2rem;
   margin-top: -6.25rem;
@@ -806,7 +817,8 @@ main {
   min-height: 6rem;
   padding: 1rem;
   border-left: 3px solid var(--blue);
-  background-color: rgba(255, 255, 255, 0.308);
+  background-color: rgba(255, 255, 255, 0.103);
+  backdrop-filter: blur(100px);
 }
 
 .agenda__item {
@@ -906,12 +918,13 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: min(100%, 600px);
+  width: min(100%, 800px);
 }
 /* Faqs */
 
 @media screen and (min-width: 768px) {
   .hero {
+    min-height: calc(100vh + 6.25rem);
     margin-top: -9.25rem;
     background-image: url(./assets/images/hero-bg.png);
   }
@@ -1052,6 +1065,12 @@ main {
     height: 100%;
   }
   /* Location */
+
+  /* Faqs */
+  .faqs {
+    padding: 4rem 3rem;
+  }
+  /* Faqs */
 }
 
 @media screen and (min-width: 1024px) {
