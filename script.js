@@ -77,3 +77,30 @@ document.querySelectorAll('.accordion__title').forEach((button) => {
     });
   });
 });
+
+// Header
+// Elements
+const nav = document.querySelector('.nav');
+const navLinks = Array.from(document.querySelectorAll('.nav__item'));
+const navList = document.querySelector('.nav__list');
+const navHamburger = document.querySelector('.nav__hamburger');
+const openHamburger = document.querySelector('#hamburgerOpen');
+const closeHamburger = document.querySelector('#hamburgerClose');
+
+// Control Nav closing
+navList.addEventListener('click', (e) => {
+  const cursorTarget = e.target.closest('.nav__item');
+  if (!navLinks.includes(cursorTarget)) return;
+  closeHamburger.checked = true;
+});
+
+// Scroll Blur
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+
+  if (window.scrollY > 300) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
