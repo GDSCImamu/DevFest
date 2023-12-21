@@ -169,6 +169,10 @@ address {
 }
 
 /* Components */
+.icon {
+  max-width: 40px;
+}
+
 /* Button */
 .btn {
   line-height: 0.8;
@@ -496,6 +500,43 @@ header:has(#hamburgerOpen:checked) > #navWrapper {
   backdrop-filter: blur(30px);
 }
 /* Header */
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0 1rem;
+  border-top: 1px solid var(--white);
+}
+
+.footer__logo {
+  max-width: 250px;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer__icon {
+  max-width: 30px;
+  filter: brightness(0) invert(1);
+}
+/* Footer */
 
 /* Styling */
 body {
