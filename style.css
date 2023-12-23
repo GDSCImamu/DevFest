@@ -925,7 +925,7 @@ main {
   .hero {
     min-height: calc(100vh + 6.25rem);
     margin-top: -9.25rem;
-    background-image: url(./assets/images/hero-bg.png);
+    background-image: url(./assets/images/Hero-bg.png);
   }
 
   .hero__logo {
