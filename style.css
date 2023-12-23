@@ -913,8 +913,7 @@ main {
 }
 
 .faqs__inner {
-  display: flex;
-  flex-direction: column;
+  display: block;
   align-items: center;
   justify-content: center;
   gap: 1rem;
