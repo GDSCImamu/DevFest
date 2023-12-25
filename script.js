@@ -5,7 +5,7 @@ const minuteElement = document.querySelector('#timerMinute');
 const secondElement = document.querySelector('#timerSecond');
 
 // Initializing variables
-const lunchDate = new Date('Dec 25, 2023 00:00:00').getTime();
+const lunchDate = new Date('Dec 31, 2023 09:00:00').getTime();
 
 let currentTime;
 let launchWaitTime;
@@ -103,4 +103,31 @@ window.addEventListener('scroll', () => {
   } else {
     header.classList.remove('sticky');
   }
+});
+
+// Reveal Section
+const sections = document.querySelectorAll('.section');
+
+const sectionObsCallback = (entries, observer) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObsOpts = {
+  root: null,
+  threshold: 0.2,
+};
+
+const sectionObserver = new IntersectionObserver(
+  sectionObsCallback,
+  sectionObsOpts
+);
+
+sections.forEach((section) => {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
 });
