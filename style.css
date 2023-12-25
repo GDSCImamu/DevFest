@@ -543,8 +543,21 @@ header:has(#hamburgerOpen:checked) > #navWrapper {
   gap: 0.5rem;
 }
 
+.footer__link {
+  display: block;
+  padding: 8px 8px;
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.footer__link:is(:hover, :focus-visible) {
+  transform: scale(0.8);
+}
+
 .footer__icon {
-  max-width: 30px;
+  max-width: 18px;
   filter: brightness(0) invert(1);
 }
 /* Footer */
@@ -759,11 +772,17 @@ main {
 }
 
 .speaker__social {
-  width: fit-content;
+  display: block;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.speaker__social:is(:hover, :focus-visible) {
+  transform: scale(0.8);
 }
 
 .speaker__social-icon {
-  max-width: 40px;
+  max-width: 25px;
 }
 /* Speakers */
 
