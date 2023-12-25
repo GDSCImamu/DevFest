@@ -389,6 +389,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 100;
   transition: all 0.1s ease-in;
   background-color: hsla(225, 4%, 22%, 0.432);
+  animation: header-in 2s ease;
 }
 
 .header__logo {
@@ -615,6 +616,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  animation: hero-in 1s ease;
 }
 
 .hero__logo {
@@ -657,6 +659,12 @@ main {
 /* General Styling */
 .section {
   padding: 4rem 1rem;
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .section__heading {
@@ -1231,3 +1239,21 @@ main {
     height: 650px;
   }
 }
+
+/* Animations */
+@keyframes header-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+/* Animations */

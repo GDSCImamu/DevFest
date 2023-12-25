@@ -104,3 +104,30 @@ window.addEventListener('scroll', () => {
     header.classList.remove('sticky');
   }
 });
+
+// Reveal Section
+const sections = document.querySelectorAll('.section');
+
+const sectionObsCallback = (entries, observer) => {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObsOpts = {
+  root: null,
+  threshold: 0.2,
+};
+
+const sectionObserver = new IntersectionObserver(
+  sectionObsCallback,
+  sectionObsOpts
+);
+
+sections.forEach((section) => {
+  section.classList.add('section--hidden');
+  sectionObserver.observe(section);
+});
