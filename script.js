@@ -5,7 +5,7 @@ const minuteElement = document.querySelector('#timerMinute');
 const secondElement = document.querySelector('#timerSecond');
 
 // Initializing variables
-const lunchDate = new Date('Dec 25, 2023 00:00:00').getTime();
+const lunchDate = new Date('Dec 31, 2023 09:00:00').getTime();
 
 let currentTime;
 let launchWaitTime;
