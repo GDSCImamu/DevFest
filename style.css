@@ -655,6 +655,10 @@ main {
 }
 
 /* General Styling */
+.section {
+  padding: 4rem 1rem;
+}
+
 .section__heading {
   font-size: 2rem;
   font-weight: var(--bold);
@@ -677,7 +681,6 @@ main {
   align-items: center;
   text-align: center;
   gap: 1.5rem;
-  padding: 4rem 1rem;
 }
 
 .about__heading {
@@ -736,7 +739,6 @@ main {
   justify-content: center;
   gap: 1.5rem;
   width: 100%;
-  padding: 4rem 2rem;
 }
 
 .speakers__slider {
@@ -816,8 +818,7 @@ main {
   grid-template-columns: auto;
   grid-template-rows: repeat(2, auto);
   width: 100%;
-  gap: 1.5rem;
-  padding: 4rem 1rem;
+  gap: 2rem;
 }
 
 .agenda__heading {
@@ -881,8 +882,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 4rem 1rem;
+  gap: 2rem;
 }
 
 .sponsors__inner {
@@ -951,8 +951,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 4rem 1rem;
+  gap: 2rem;
 }
 
 .faqs__inner {
@@ -984,6 +983,10 @@ main {
   }
 
   /* General Styling */
+  .section {
+    padding: 4rem 3rem;
+  }
+
   .section__heading {
     font-size: 36px;
   }
@@ -994,7 +997,6 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     column-gap: 2rem;
-    padding: 4rem 3rem;
   }
 
   .about__heading {
@@ -1039,9 +1041,6 @@ main {
   /* About */
 
   /* Speakers */
-  .speakers {
-    padding: 4rem 3rem;
-  }
 
   .speakers__slider {
     width: calc(100vw - 6rem);
@@ -1050,10 +1049,6 @@ main {
   /* Speakers */
 
   /* Agenda */
-  .agenda {
-    padding: 4rem 3rem;
-  }
-
   .agenda__list {
     gap: 1.5rem;
   }
@@ -1077,9 +1072,6 @@ main {
   /* Agenda */
 
   /* Sponsors */
-  .sponsors {
-    padding: 4rem 3rem;
-  }
 
   .sponsor {
     flex-basis: 200px;
@@ -1092,7 +1084,7 @@ main {
     position: relative;
     height: 400px;
     padding: 0;
-    margin: 200px 0;
+    margin: 100px 0;
   }
 
   .location__inner {
@@ -1107,12 +1099,6 @@ main {
     height: 100%;
   }
   /* Location */
-
-  /* Faqs */
-  .faqs {
-    padding: 4rem 3rem;
-  }
-  /* Faqs */
 }
 
 @media screen and (min-width: 1024px) {
@@ -1130,6 +1116,10 @@ main {
   }
 
   /* General Styling */
+  .section {
+    padding: 6rem;
+  }
+
   .section__heading {
     font-size: 48px;
   }
@@ -1138,7 +1128,6 @@ main {
   /* About */
   .about {
     column-gap: 3rem;
-    padding: 6rem;
   }
 
   .about__heading {
@@ -1148,7 +1137,7 @@ main {
 
   /* Speakers */
   .speakers {
-    padding: 6rem;
+    gap: 2.5rem;
   }
 
   .speakers__slider {
@@ -1161,13 +1150,13 @@ main {
 
   /* Agenda */
   .agenda {
-    padding: 6rem;
+    gap: 2.5rem;
   }
   /* Agenda */
 
   /* Sponsors */
   .sponsors {
-    padding: 6rem;
+    gap: 2.5rem;
   }
 
   .sponsors__inner {
@@ -1185,6 +1174,12 @@ main {
     height: 600px;
   }
   /* Location */
+
+  /* Faqs */
+  .faqs {
+    gap: 2.5rem;
+  }
+  /* Faqs */
 }
 
 @media screen and (min-width: 1440px) {
