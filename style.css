@@ -778,6 +778,28 @@ main {
   border: 1px solid var(--blue);
 }
 
+/* SPEAKERS TBA STYLING */
+.speaker__info {
+  position: relative;
+}
+
+.speaker__info::after {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  content: 'TBA 😊';
+  font-size: 1.1rem;
+  font-weight: var(--medium);
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: -10px;
+  width: 100%;
+  background-color: var(--white);
+  /* backdrop-filter: blur(100px); */
+}
+/* SPEAKERS TBA STYLING */
+
 .speaker__name {
   font-size: 1.5rem;
   font-weight: var(--medium);
