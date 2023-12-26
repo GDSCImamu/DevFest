@@ -151,7 +151,7 @@ address {
 /* Custom properties */
 :root {
   /* primary colors */
-  --blue: hsl(217, 89%, 61%);
+  --blue: hsl(217, 87%, 51%);
 
   /* neutral colors */
   --white: hsl(0, 0%, 100%);
@@ -171,7 +171,7 @@ address {
 /* Scroll Bar */
 body {
   --sb-track-color: #000000;
-  --sb-thumb-color: #4387f4;
+  --sb-thumb-color: #176bef;
   --sb-size: 10px;
 
   scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
@@ -896,6 +896,18 @@ main {
   border-left: 3px solid var(--blue);
   background-color: rgba(255, 255, 255, 0.103);
   backdrop-filter: blur(100px);
+}
+
+.agenda__listitem:nth-of-type(4n + 2) .agenda__inner {
+  border-color: hsl(4, 100%, 59%);
+}
+
+.agenda__listitem:nth-of-type(4n + 3) .agenda__inner {
+  border-color: hsl(41, 93%, 56%);
+}
+
+.agenda__listitem:nth-of-type(4n + 4) .agenda__inner {
+  border-color: hsl(147, 74%, 35%);
 }
 
 .agenda__item {
