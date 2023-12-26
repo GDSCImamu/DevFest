@@ -94,7 +94,7 @@ navList.addEventListener('click', (e) => {
   closeHamburger.checked = true;
 });
 
-// Scroll Blur
+// Sticky Header
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
 
