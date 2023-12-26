@@ -86,12 +86,27 @@ const navList = document.querySelector('.nav__list');
 const navHamburger = document.querySelector('.nav__hamburger');
 const openHamburger = document.querySelector('#hamburgerOpen');
 const closeHamburger = document.querySelector('#hamburgerClose');
+const navWrapper = document.querySelector('#navWrapper');
 
 // Control Nav closing
 navList.addEventListener('click', (e) => {
   const cursorTarget = e.target.closest('.nav__item');
   if (!navLinks.includes(cursorTarget)) return;
   closeHamburger.checked = true;
+  document.querySelector('body').style.overflowY = 'auto';
+});
+
+navWrapper.addEventListener('click', () => {
+  closeHamburger.checked = true;
+  document.querySelector('body').style.overflowY = 'auto';
+});
+
+openHamburger.addEventListener('change', () => {
+  document.querySelector('body').style.overflowY = 'hidden';
+});
+
+closeHamburger.addEventListener('change', () => {
+  document.querySelector('body').style.overflowY = 'auto';
 });
 
 // Sticky Header

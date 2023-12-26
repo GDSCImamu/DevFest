@@ -472,6 +472,7 @@ header:has(#hamburgerClose:checked) > .nav {
   opacity: 0.4;
   background-color: var(--black);
   z-index: 1000;
+  touch-action: none;
 }
 
 header:has(#hamburgerOpen:checked) > #navWrapper {
