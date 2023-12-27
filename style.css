@@ -802,7 +802,7 @@ main {
   position: absolute;
   display: grid;
   place-content: center;
-  content: 'TBA 😊';
+  content: 'TBA';
   font-size: 1.1rem;
   font-weight: var(--medium);
   right: 0;
