@@ -385,15 +385,15 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem;
   z-index: 100;
   transition: all 0.1s ease-in;
-  background-color: hsla(225, 4%, 22%, 0.432);
+  background-color: transparent;
   animation: header-in 2s ease;
 }
 
 .header__logo {
-  width: 3.125rem;
+  width: 8rem;
 }
 
 .hamburger {
@@ -481,8 +481,12 @@ header:has(#hamburgerOpen:checked) > #navWrapper {
 
 @media screen and (min-width: 768px) {
   .header {
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     padding-right: 7rem;
+  }
+
+  .header__logo {
+    width: 9rem;
   }
 
   .hamburger {
@@ -522,13 +526,13 @@ header:has(#hamburgerOpen:checked) > #navWrapper {
 
 @media screen and (min-width: 1024px) {
   .header {
-    padding: 2rem 6rem;
+    padding: 1rem 6rem;
     background: none;
     border: none;
   }
 
   .header__logo {
-    width: 4.0625rem;
+    width: 12rem;
   }
 }
 
