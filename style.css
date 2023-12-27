@@ -388,7 +388,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem;
   z-index: 100;
   transition: all 0.1s ease-in;
-  background-color: hsla(225, 4%, 22%, 0.432);
+  background-color: transparent;
   animation: header-in 2s ease;
 }
 
