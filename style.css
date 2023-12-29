@@ -779,7 +779,7 @@ main {
   color: var(--black);
   padding: 2rem;
   margin-top: 5rem;
-  border-radius: 10px;
+  border-radius: 12px;
   scroll-snap-align: center;
   background-color: var(--white);
 }
