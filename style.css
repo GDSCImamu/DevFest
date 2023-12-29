@@ -928,7 +928,7 @@ main {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: px) {
   .sponsors__inner {
     transform: translateX(-5%); 
     display: flex;
@@ -948,17 +948,13 @@ main {
   aspect-ratio: 1;
   object-fit: contain;
 }
-
+/* Sponsors */
 
 #big-img{
-  max-width: 400px;
+  max-width: 300px;
   grid-column: 1/-1;
+  margin: auto;
  
-}
-
-#i-img{
-  max-width: 200px;
-  
 }
 /* Sponsors */
 
