@@ -793,26 +793,7 @@ main {
   border: 1px solid var(--blue);
 }
 
-/* SPEAKERS TBA STYLING */
-.speaker__info {
-  position: relative;
-}
 
-.speaker__info::after {
-  position: absolute;
-  display: grid;
-  place-content: center;
-  content: 'TBA';
-  font-size: 1.1rem;
-  font-weight: var(--medium);
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: -10px;
-  width: 100%;
-  background-color: var(--white);
-  /* backdrop-filter: blur(100px); */
-}
 /* SPEAKERS TBA STYLING */
 
 .speaker__name {
@@ -934,22 +915,50 @@ main {
   gap: 2rem;
 }
 
+
 .sponsors__inner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid: gap 1rem;
+  column-gap: 50px;
+  row-gap: 50px;
   justify-content: center;
-  gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .sponsors__inner {
+    transform: translateX(-5%); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+  }
+}
+  
 
 .sponsor {
   flex-basis: 150px;
   flex-grow: 1;
   flex-shrink: 0;
   max-width: 150px;
-  aspect-ratio: 3/2;
+  aspect-ratio: 1;
   object-fit: contain;
+}
+
+
+#big-img{
+  max-width: 400px;
+  grid-column: 1/-1;
+ 
+}
+
+#i-img{
+  max-width: 200px;
+  
 }
 /* Sponsors */
 
@@ -1163,6 +1172,7 @@ main {
     font-size: 2.5rem;
   }
 
+  
   .address {
     flex-direction: row;
     gap: 1rem;
@@ -1285,4 +1295,5 @@ main {
     transform: translateY(-100%);
   }
 }
+
 /* Animations */
