@@ -793,9 +793,6 @@ main {
   border: 1px solid var(--blue);
 }
 
-
-/* SPEAKERS TBA STYLING */
-
 .speaker__name {
   font-size: 1.5rem;
   font-weight: var(--medium);
@@ -915,10 +912,9 @@ main {
   gap: 2rem;
 }
 
-
 .sponsors__inner {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid: gap 1rem;
   column-gap: 50px;
   row-gap: 50px;
@@ -927,10 +923,9 @@ main {
   margin-right: auto;
 }
 
-
 @media only screen and (max-width: px) {
   .sponsors__inner {
-    transform: translateX(-5%); 
+    transform: translateX(-5%);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -938,7 +933,6 @@ main {
     transform: none;
   }
 }
-  
 
 .sponsor {
   flex-basis: 150px;
@@ -950,14 +944,11 @@ main {
 }
 /* Sponsors */
 
-#big-img{
+#big-img {
   max-width: 300px;
   grid-column: 1/-1;
   margin: auto;
- 
 }
-
-
 
 /* Location */
 .location {
@@ -1169,7 +1160,6 @@ main {
     font-size: 2.5rem;
   }
 
-  
   .address {
     flex-direction: row;
     gap: 1rem;
