@@ -619,7 +619,7 @@ main {
   text-align: center;
   padding: 4rem 1rem;
   margin-top: -6rem;
-  background-image: url(./assets/images/hero-mobile.png);
+  background-image: url(./assets/images/hero-mobile.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1022,7 +1022,7 @@ main {
   .hero {
     min-height: calc(100vh + 0.5rem);
     margin-top: -8rem;
-    background-image: url(./assets/images/Hero-bg.png);
+    background-image: url(./assets/images/Hero-bg.svg);
   }
 
   .hero__logo {
