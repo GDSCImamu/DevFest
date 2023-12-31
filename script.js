@@ -1,4 +1,7 @@
 // Timer Elements on DOM
+const liveDiv = document.querySelector('.live');
+const btnsDiv = document.querySelector('.hero__btns');
+const timer = document.querySelector('.timer');
 const dayElement = document.querySelector('#timerDay');
 const hourElement = document.querySelector('#timerHour');
 const minuteElement = document.querySelector('#timerMinute');
@@ -22,6 +25,7 @@ const startTimer = () => {
 
   if (launchWaitTime <= 0) {
     stopTimer();
+    showLiveNow();
   }
 };
 
@@ -50,6 +54,11 @@ const stopTimer = () => {
   hourElement.textContent = '00';
   minuteElement.textContent = '00';
   secondElement.textContent = '00';
+};
+
+const showLiveNow = () => {
+  liveDiv.classList.remove('hide');
+  [timer, btnsDiv].forEach((e) => e.classList.add('hide'));
 };
 
 // Timer launched
